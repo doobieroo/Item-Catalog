@@ -1,0 +1,50 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	
+<div class="row divider green">		
+	<div class="col-md-12"></div>
+</div>
+
+<div class="row banner main">
+	<div class="col-md-12 header">
+		<h2><a href="{{url_for('showCategories')}}">Categories</a> --> {{ category.name }}</h2>
+	</div>
+</div>
+
+<div class="row">
+	<div class = 'flash'>
+		{% with messages = get_flashed_messages() %}
+   			{% if messages %}
+       			<ul>
+       				{% for message in messages %}
+           				<li> <strong> {{ message }} </strong> </li>
+       				{% endfor %}
+       			</ul>
+     	  	{% endif %}
+   		{% endwith %}
+	</div>
+</div>
+		
+{% if items !=[] %}	
+	<div class="row">
+		<div class="col-sm-12">
+			{% for i in items %}
+				<div class="menu-item">
+					<h3>{{i.name}}</h3>
+					<p>{{i.description}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% else %}
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="menu-item">
+				<h3>No Items Yet</h3>
+			</div>
+		</div>
+	</div>	
+{% endif %}
+
+{% endblock %}
