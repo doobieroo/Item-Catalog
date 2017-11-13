@@ -13,7 +13,7 @@ In order to get a copy of the project up and running on your local machine for d
 
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Google Chrome](https://www.google.com/chrome/browser/features.html?brand=CHBD&gclid=CjwKCAjw_dTMBRBHEiwApIzn_LkIhLMmU2yEU8pU-EfT_9fzVZ2YfH0S3Pk63j-6YulHZt-buUfuohoC7hIQAvD_BwE&dclid=CImvofPc3tUCFRfdYgodupMCzw) browser installed.
 
-- Virtual machine (if using) configured. See this [Vagrantfile](correct url) for use.
+- Virtual machine (if using) configured. See this [Vagrantfile](https://github.com/doobieroo/Item-Catalog/blob/master/Vagrantfile) for use.
 
 - SQLite.
 
@@ -23,25 +23,22 @@ In order to get a copy of the project up and running on your local machine for d
 Download [Item Catalog - The Shelf Life of Foods](https://github.com/doobieroo/Item-Catalog).
 
 ## Unit Testing
-To test this code, ensure you are connected to the virtual machine. Bring up a console window (like Git Bash).  
+To test this code, ensure you are connected to the virtual machine. Bring up a console window (like Git Bash).
 
-__Optionally you can choose to pre-load initial data by running `python shelflife_load.py` from the vagrant directory (or shared virtual machine directory).__ 
+_Optionally you can choose to pre-load initial data by running `python shelflife_load.py` from the vagrant directory (or shared virtual machine directory)._
 
-To begin the application itself, use `python shelflife.py` from the vagrant directory (or shared virtual machine directory).
+To begin the application itself, run `python shelflife.py` from the vagrant directory (or shared virtual machine directory).
 
 Next, pull up a web browser and navigate to http://localhost:8000. From there you will be able to see both the public (read-only) views and if you login (using your Google account) - you'll see the add/update/delete views.
 
 ## API endpoints
 Three different API endpoints are provided in JSON format. They are:
 
-1. List of all categories
-    Request: /categories/JSON
+1. List of all categories (/categories/JSON)
 
-2. All items from a specific category
-    Request: /category/CATEGORY_ID/JSON
+2. All items from a specific category (/category/CATEGORY_ID/JSON)
 
-3. One specific item from one specific category
-    Request: /category/CATEGORY_ID/ITEM_ID/JSON
+3. One specific item from one specific category (/category/CATEGORY_ID/ITEM_ID/JSON)
 
 ## License
 This project is licensed under the GNU General Public License. See the [LICENSE.md](https://github.com/doobieroo/Item-Catalog/blob/master/LICENSE) for details.
