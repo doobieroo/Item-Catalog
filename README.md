@@ -23,7 +23,11 @@ In order to get a copy of the project up and running on your local machine for d
 Download [Item Catalog - The Shelf Life of Foods](https://github.com/doobieroo/Item-Catalog).
 
 ## Unit Testing
-To test this code, ensure you are connected to the virtual machine, then from a console window (like Git Bash) run shelflife.py from the vagrant directory (or shared virtual machine directory).
+To test this code, ensure you are connected to the virtual machine. Bring up a console window (like Git Bash).  
+
+__Optionally you can choose to pre-load initial data by running `python shelflife_load.py` from the vagrant directory (or shared virtual machine directory).__ 
+
+To begin the application itself, use `python shelflife.py` from the vagrant directory (or shared virtual machine directory).
 
 Next, pull up a web browser and navigate to http://localhost:8000. From there you will be able to see both the public (read-only) views and if you login (using your Google account) - you'll see the add/update/delete views.
 
@@ -31,13 +35,13 @@ Next, pull up a web browser and navigate to http://localhost:8000. From there yo
 Three different API endpoints are provided in JSON format. They are:
 
 1. List of all categories
-Request: http://localhost:8000/categories/JSON
+    Request: /categories/JSON
 
 2. All items from a specific category
-Request: http://localhost:8000/category/CATEGORY_ID/JSON
+    Request: /category/CATEGORY_ID/JSON
 
 3. One specific item from one specific category
-Request: http://localhost:8000/category/CATEGORY_ID/ITEM_ID/JSON
+    Request: /category/CATEGORY_ID/ITEM_ID/JSON
 
 ## License
 This project is licensed under the GNU General Public License. See the [LICENSE.md](https://github.com/doobieroo/Item-Catalog/blob/master/LICENSE) for details.
